@@ -1,0 +1,19 @@
+#########################################
+# Syntax Coloring Map for ESP8266ATLib  #
+#########################################
+# Class
+#########################################
+
+Ambient_SpresenseLTEM 	KEYWORD1
+theAmbient	KEYWORD1
+
+#########################################
+# Methods and Functions
+#########################################
+
+begin       	KEYWORD2
+setupChannel	        KEYWORD2
+set		KEYWORD2
+clear		KEYWORD2
+send		KEYWORD2
+end         	KEYWORD2
