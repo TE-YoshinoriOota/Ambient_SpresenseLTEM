@@ -1,5 +1,4 @@
-# Spresense LTE-M 用 Ambient Arduino Library
-## Ambient Arduino Library for Sony Spresense LTE-M solution
+# Ambient Arduino Library for Sony Spresense LTE-M 
 This library is an Arduino library for Spresensen LTE-M board to connect to the Ambient service.
 
 ![Sony Spresense LTE-M](https://github.com/TE-YoshinoriOota/Ambient_SpresenseLTEM/blob/master/resources/sDSC01719.jpg)
