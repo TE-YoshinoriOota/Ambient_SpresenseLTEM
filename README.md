@@ -15,8 +15,36 @@ Sony Spresense is a single board computer integrated with a positioning function
 
 
 ## Example 
-The example sketches in this library will give you a hint to make an application to collect and send your position using Sony Spresense.
+The example sketches in this library will give you a hint to make an application of collecting and sending your position using Sony Spresense. This library supports only the sending (write) function.
 
 ![Sony Spresense with Ambient](https://github.com/TE-YoshinoriOota/Ambient_SpresenseLTEM/blob/master/resources/ambient.png)
+
+This library defines its instance named "theAmbient". It means you can use it directly when  "Ambient_SprensenseLTEM.h" is included. The below is the description of the outline of the library.
+
+* __theAmbient.begin("apn_name", "apn_usrname", "apn_passwd")__ <br/> 
+__apn_name:__ _an APN name given by operators of your SIM card_ <br/>
+__apn_usrname:__ _an APN user name given by operators of your SIM card_ <br/>
+__apn_passwd:__ _an APN password given by operators of your SIM card_ <br/>
+
+* __theAmbient.setupChannel(channel_id, "writeKey")__ <br/>
+__channel_id:__ _a channelId given by Ambient service_ <br/>
+__writeKey:__ _a write key given by Ambient service_ <br/>
+
+* __theAmbient.set(field, "data")__ <br/>
+__field:__ _specifing a field number to put your data (The field numbers of "9" and "10" are reserved for latitudes and longitudes)_ <br/>
+__data:__ _data to put on Ambient_ <br/>
+
+* __theAmbient.send()__ <br/>
+_Send data set by theAmbient.set() the Ambient service_ <br/>
+
+* __theAmbinet.clear(field)__ <br/>
+_Clear data of a specified field on the channel_ <br/>
+
+* __theAmbinet.clearAll()__ <br/>
+_Clear all data on the channel_ <br/>
+
+* __theAmbient.end()__ <br/>
+_Close the channel_ <br/>
+
 
 
