@@ -6,6 +6,8 @@ This library is an Arduino library for Spresensen LTE-M board to connect to the 
 ## What is Sony Spresense LTE-M?
 Sony Spresense is a single board computer integrated with a positioning functionality that has GPS, GLONASS and QZSS (みちびき) that enables to get a precise position. Sony released Spresense LTE-M extension board having an LTE-M module that is made by Altair of a Sony group company. LTE-M is a super low power communication method (LPWA: Low Power Wide Area) using LTE licensed band. It would be suitable for IoT PoC driven by batteries.  For more information, please refer to the [Sony support site](https://developer.sony.com/develop/spresense/docs/hw_docs_lte_ja.html).
 
+![Spresense main and LTE-M](https://github.com/TE-YoshinoriOota/Ambient_SpresenseLTEM/blob/master/resources/SpresenseMain_LTE-MExtensionBoard.jpg)
+
 ## What is Ambient?
 ["Ambient"](https://ambidata.io/) is an IoT cloud service in Japan to make IoT data to be visualized. And it is able to put the data on maps easily when you add the position information. Ambient also has a powerful graphing function that is very easy to see your collected data. Using the service is also very easy. Sign in your account with your email, then you can use the basic service free of charge. 
 
