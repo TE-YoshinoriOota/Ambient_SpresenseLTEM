@@ -150,13 +150,15 @@ bool Ambient_SpresenseLTEM::send() {
     Serial.println("Host: " + String(server)); // + String(":") + String(port));
     Serial.println("Content-Length: " + String(post.length()));
     Serial.println("Content-Type: " + ctype);
-	Serial.println("User-Agent: NuttX/6.xx.x (; http://www.nuttx.org/)");
+    Serial.println("User-Agent: NuttX/6.xx.x (; http://www.nuttx.org/)");
     Serial.println("Connection: close");
     Serial.println();
 #endif
 
-	delay(100);
-    client.println(post);
+    delay(100);
+    if(client.println(post) == 0){
+      return false;
+    }
 
 #ifdef AMBI_DEBUG
     Serial.println(post);
@@ -164,6 +166,7 @@ bool Ambient_SpresenseLTEM::send() {
 
   } else {
     Serial.println("Connection failed to ambidata.io");
+    return false;
   }
 
   delay(100);
@@ -191,6 +194,7 @@ bool Ambient_SpresenseLTEM::send() {
 
 void Ambient_SpresenseLTEM::end() {
   client.stop();
+  lteAccess.shutdown();
 }
 
 Ambient_SpresenseLTEM theAmbient;
